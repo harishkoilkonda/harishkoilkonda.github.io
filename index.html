@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sightseeingplace.com</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="js/angular.route.min.js"></script>
+    <script src="https://use.fontawesome.com/fd6f57e86c.js"></script>
+
+  </head>
+  <body ng-controller="homeController">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>     
+        </button>
+
+        <a class="navbar-brand" href="#/home">Sightseeing Places in USA</a>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active"><a href="#/home">Home</a></li>
+            <li class="dropdown"><a href="#/West" data-toggle="dropdown" class="dropdown-toggle">West<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/Pacific">Pacific</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Washington">Washington(WA)</a></li>
+                      <li><a href="#/Oregon">Oregon(OR)</a></li>
+                      <li><a href="#/California">California(CA)</a></li>
+                      <li><a href="#/Alaska">Alaska(AK)</a></li>
+                      <li><a href="#/Hawaii">Hawaii(HI)</a></li>
+                    </ul></li>
+                    <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/Mountain">Mountain</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Montana">Montana(MT)</a></li>
+                      <li><a href="#/Idaho">Idaho(ID)</a></li>
+                      <li><a href="#/Wyoming">Wyoming(WY)</a></li>
+                      <li><a href="#/Nevada">Nevada(NV)</a></li>
+                      <li><a href="#/Utah">Utah(UT)</a></li>
+                      <li><a href="#/Colorado">Colorado(CO)</a></li>
+                      <li><a href="#/Arizona">Arizona(AZ)</a></li>
+                      <li><a href="#/NewMexico">New Mexico(NM)</a></li>
+                    </ul>                    
+                  </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#/MidWest" data-toggle="dropdown" class="dropdown-toggle">Mid West<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/WestNorthCentral">West North Central</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/NorthDakota">North Dakota(ND)</a></li>
+                      <li><a href="#/SouthDakota">South Dakota(SD)</a></li>
+                      <li><a href="#/Nebraska">Nebraska(NE)</a></li>
+                      <li><a href="#/Kansas">Kansas(KS)</a></li>
+                      <li><a href="#/Minnesota">Minnesota(MN)</a></li>
+                      <li><a href="#/Iowa">Iowa(IA)</a></li>
+                      <li><a href="#/Missouri">Missouri(MO)</a></li>
+                    </ul></li>
+                    <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/EastNorthCentral">East North Central</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Wisconsin">Wisconsin(WI)</a></li>
+                      <li><a href="#/Michigan">Michigan(MI)</a></li>
+                      <li><a href="#/Illinois">Illinois(IL)</a></li>
+                      <li><a href="#/Indiana">Indiana(IN)</a></li>
+                      <li><a href="#/Ohio">Ohio(OH)</a></li>
+                    </ul>                    
+                  </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#/NorthEast" data-toggle="dropdown" class="dropdown-toggle">North East<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/MiddleAtlantic">Middle Atlantic</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/NewYork">New York(NY)</a></li>
+                      <li><a href="#/NewJersey">New Jersey(NJ)</a></li>
+                      <li><a href="#/Pennsylvania">Pennsylvania(PA)</a></li>
+                    </ul></li>
+                    <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/NewEngland">New England</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/NewHampshire">New Hampshire(NH)</a></li>
+                      <li><a href="#/Vermont">Vermont(VT)</a></li>
+                      <li><a href="#/Maine">Maine(ME)</a></li>
+                      <li><a href="#/Massachusetts">Massachusetts(MA)</a></li>
+                      <li><a href="#/RhodeIsland">Rhode Island(RI)</a></li>
+                      <li><a href="#/Connecticut">Connecticut(CT)</a></li>
+                    </ul>                    
+                  </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#/South" data-toggle="dropdown" class="dropdown-toggle">South<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/WestSouthCentral">West South Central</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Oklahoma">Oklahoma(OK)</a></li>
+                      <li><a href="#/Arkansas">Arkansas(AR)</a></li>
+                      <li><a href="#/Texas">Texas(TX)</a></li>
+                      <li><a href="#/Louisiana">Louisiana(LA)</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/EastSouthCentral">East South Central</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Kentucky">Kentucky(KY)</a></li>
+                      <li><a href="#/Tennessee">Tennessee(TN)</a></li>
+                      <li><a href="#/Mississippi">Mississippi(MS)</a></li>
+                      <li><a href="#/Alabama">Alabama(AL)</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#/SouthAtlantic">South Atlantic</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#/Delaware">Delaware(DE)</a></li>
+                      <li><a href="#/Maryland">Maryland(MD)</a></li>
+                      <li><a href="#/Washington">District of Columbia(DC)</a></li>
+                      <li><a href="#/WestVirginia">West Virginia(WV)</a></li>
+                      <li><a href="#/Virginia">Virginia(VA)</a></li>
+                      <li><a href="#/NorthCarolina">North Carolina(NC)</a></li>
+                      <li><a href="#/SouthCarolina">South Carolina(SC)</a></li>
+                      <li><a href="#/Georgia">Georgia(GA)</a></li>
+                      <li><a href="#/Florida">Florida(FL)</a></li>
+                    </ul>                    
+                  </li>
+                </ul>
+            </li>
+            <li><a href="#/Gallery">Gallery</a></li>
+            <li><a href="#/ContactUs">Contact Us</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container">
+        <div class="jumbotron text-center">
+          <h1>{{welcometag}}</h1>
+        </div>
+      <ng-view></ng-view>
+    </div>
+    <center>
+    <nav>
+      <ul class="pagination">
+        <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+    </center>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-text pull-left">
+          <p>copyright 2017</p>
+        </div>
+        <div class="navbar-text pull-right">
+        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+        </div>     
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/getter.js"></script>
+    <script src="js/homecontrol.js"></script>
+    <script src="js/siterouting.js"></script>
+    
+
+  </body>
+</html>
