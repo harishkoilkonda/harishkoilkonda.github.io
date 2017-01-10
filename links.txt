@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/21400408/create-read-more-link-in-angularjs
